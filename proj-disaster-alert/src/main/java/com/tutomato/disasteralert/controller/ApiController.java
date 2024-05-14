@@ -1,4 +1,3 @@
-/*
 package com.tutomato.disasteralert.controller;
 
 import com.tutomato.disasteralert.common.utility.CommonUtility;
@@ -28,25 +27,7 @@ public class ApiController {
             @RequestParam(name = "pageNo", required = false) Integer pageNo){
         HashMap resultMap = new HashMap<>();
 
-        try {
-            UriComponentsBuilder uriComponentsBuilder = CommonUtility.getUriComponentsBuilder("/V2/api/DSSP-IF-00247");
-
-            if(numOfRows != null) uriComponentsBuilder.queryParam("numOfRows", numOfRows);
-            if(pageNo != null) uriComponentsBuilder.queryParam("pageNo", pageNo);
-
-            resultMap =  restTemplate.exchange(
-                                        uriComponentsBuilder.build().toUri(),
-                                        HttpMethod.GET,
-                                        null,
-                                        HashMap.class
-                                    ).getBody();
-
-        }catch (Exception e){
-            logger.error("getAlertList error", e);
-        }
-
         return resultMap;
     }
 
 }
-*/
