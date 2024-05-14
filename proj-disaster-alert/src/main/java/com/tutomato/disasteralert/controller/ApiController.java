@@ -1,4 +1,3 @@
-/*
 package com.tutomato.disasteralert.controller;
 
 import com.tutomato.disasteralert.common.utility.CommonUtility;
@@ -49,4 +48,3 @@ public class ApiController {
     }
 
 }
-*/
